@@ -1,7 +1,8 @@
 # laravel-rest-api
 
 # .env file 
-``
+
+```
 APP_NAME=Laravel
 APP_ENV=local
 APP_KEY=base64:/66/CjKbXvGHWMZ8VI5mZS0VlG/oUs22AbwoQ2hiumc=
@@ -36,4 +37,5 @@ MAIL_ENCRYPTION=null
 PUSHER_APP_ID=
 PUSHER_APP_KEY=
 PUSHER_APP_SECRET=
-``
+
+```
