@@ -39,3 +39,23 @@ PUSHER_APP_KEY=
 PUSHER_APP_SECRET=
 
 ```
+
+# Migration
+
+```
+php artisan migrate
+
+```
+
+# Migration
+
+```
+php artisan migrate
+
+```
+Database Dummy seed
+
+```
+php artisan db:seed
+
+```
