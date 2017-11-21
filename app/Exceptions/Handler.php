@@ -13,7 +13,7 @@ class Handler extends ExceptionHandler
      * @var array
      */
     protected $dontReport = [
-        //
+            //
     ];
 
     /**
@@ -48,6 +48,20 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        //return parent::render($request, $exception);
+        // This will replace our 404 response with
+        // a JSON response.
+
+        if ($exception->getMessage() == 'Unauthenticated.') {
+            return response()->json(['error' => 'Unauthenticated'], 401);
+        }
+        if (($exception instanceof ModelNotFoundException || $exception instanceof MethodNotAllowedHttpException ) &&
+                $request->wantsJson()) {
+            return response()->json([
+                        'data' => 'Resource not found'
+                            ], 404);
+        }
+
         return parent::render($request, $exception);
     }
 }
