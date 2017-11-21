@@ -46,12 +46,7 @@ PUSHER_APP_SECRET=
 php artisan migrate
 ```
 
-# Migration
-
-```
-php artisan migrate
-```
-#Database Dummy seed
+# Database Dummy seed
 
 ```
 php artisan db:seed
